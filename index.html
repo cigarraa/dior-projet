@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina inicial</title>
+</head>
+<body style="text-align: center;margin-top: 19%;background-color: black;color:aliceblue">
+    <img src="/imagens/logoDaDior.PNG">
+    <br><br><br>
+    <form>
+        usuario:<input id="user" type="text"  placeholder="digite seu nome de usuario">
+        <br><br>
+        senha:<input id="senha" type="password" placeholder="digite sua senha">
+        <br><br>
+        <button id="login" onclick="loginUser()">enviar</button>
+    </form>
+    <script>
+        function loginUser(){
+            user = document.getElementById("user").value;
+            senha = document.getElementById("senha").value;
+            localStorage.setItem("user",user);
+            localStorage.setItem("senha",senha);
+                window.location = "home.html";
+            
+        }
+    </script>
+</body>
+</html>
